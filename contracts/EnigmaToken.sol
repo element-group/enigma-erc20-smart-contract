@@ -28,7 +28,7 @@ contract EnigmaToken is StandardToken, Pausable {
 
   string public constant name = 'Enigma Token';                           // Set the token name for display
   string public constant symbol = 'ENG';                               // Set the token symbol for display
-  uint256 public constant decimals = 8;                                  // Set the number of decimals for display
+  uint8 public constant decimals = 8;                                  // Set the number of decimals for display
   uint256 public constant INITIAL_SUPPLY = 1000000000 * 10**decimals;    // 1 Billion ENG specified in Grains
 
   /**
@@ -38,6 +38,7 @@ contract EnigmaToken is StandardToken, Pausable {
   function EnigmaToken() {
     totalSupply = INITIAL_SUPPLY;                               // Set the total supply
     balances[msg.sender] = INITIAL_SUPPLY;                      // Creator address is assigned all
+    Transfer(0x0, msg.sender, INITIAL_SUPPLY)
   }
 
   /**
