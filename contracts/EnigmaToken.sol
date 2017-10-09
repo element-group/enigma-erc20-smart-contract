@@ -26,10 +26,10 @@ import "./zeppelin-solidity/contracts/lifecycle/Pausable.sol";
  */
 contract EnigmaToken is StandardToken, Pausable {
 
-  string public constant name = 'Enigma Token';                           // Set the token name for display
-  string public constant symbol = 'ENG';                               // Set the token symbol for display
-  uint8 public constant decimals = 8;                                  // Set the number of decimals for display
-  uint8 public constant INITIAL_SUPPLY = 1000000000 * 10**decimals;    // 1 Billion ENG specified in Grains
+  string public constant name = 'Enigma Token';                               // Set the token name for display
+  string public constant symbol = 'ENG';                                      // Set the token symbol for display
+  uint8 public constant decimals = 8;                                         // Set the number of decimals for display
+  uint256 public constant INITIAL_SUPPLY = 1000000000 * 10**uint256(decimals) // 1 Billion ENG specified in Grains
 
   /**
    * @dev SesnseToken Constructor
