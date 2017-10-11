@@ -17,8 +17,8 @@ import "./zeppelin-solidity/contracts/lifecycle/Pausable.sol";
  * 1 ENG is equivalent to:
  *   100000000 == 1 * 10**8 == 1e8 == One Hundred Million Grains
  *
- * 1 Billion ENG (total supply) is equivalent to:
- *   100000000000000000 == 1000000000 * 10**8 == 1e17 == One Hundred Quadrillion Grains
+ * 150 million ENG (total supply) is equivalent to:
+ *   15000000000000000 == 150000000 * 10**8 == 1e17
  *
  * All initial ENG Grains are assigned to the creator of
  * this contract.
@@ -29,7 +29,7 @@ contract EnigmaToken is StandardToken, Pausable {
   string public constant name = 'Enigma Token';                                // Set the token name for display
   string public constant symbol = 'ENG';                                       // Set the token symbol for display
   uint8 public constant decimals = 8;                                          // Set the number of decimals for display
-  uint256 public constant INITIAL_SUPPLY = 1000000000 * 10**uint256(decimals); // 1 Billion ENG specified in Grains
+  uint256 public constant INITIAL_SUPPLY = 150000000 * 10**uint256(decimals);  // 150 million ENG specified in Grains
 
   /**
    * @dev SesnseToken Constructor

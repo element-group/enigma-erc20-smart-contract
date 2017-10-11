@@ -29,30 +29,30 @@ contract('EnigmaToken', (accounts) => {
     })
   })
 
-  it('should have INITIAL_SUPPLY set to 1e17 Grains', () => {
+  it('should have INITIAL_SUPPLY set to 1.5e16 Grains', () => {
     return EnigmaToken.deployed().then((instance) => {
       return instance.INITIAL_SUPPLY.call()
     })
     .then((supply) => {
-      assert.equal(supply, 1e17, "1e17 wasn't the value of INITIAL_SUPPLY Grains")
+      assert.equal(supply, 1.5e16, "1.5e16 wasn't the value of INITIAL_SUPPLY Grains")
     })
   })
 
-  it('should set totalSupply to 1e17 Grains', () => {
+  it('should set totalSupply to 1.5e16 Grains', () => {
     return EnigmaToken.deployed().then((instance) => {
       return instance.totalSupply.call()
     })
     .then((supply) => {
-      assert.equal(supply, 1e17, "1e17 wasn't the value of totalSupply Grains")
+      assert.equal(supply, 1.5e16, "1.5e16 wasn't the value of totalSupply Grains")
     })
   })
 
-  it('should put 1e17 Grains in the first account', () => {
+  it('should put 1.5e16 Grains in the first account', () => {
     return EnigmaToken.deployed().then((instance) => {
       return instance.balanceOf.call(accounts[0])
     })
     .then((balance) => {
-      assert.equal(balance.valueOf(), 1e17, '1e17 Grains were not assigned to the first account')
+      assert.equal(balance.valueOf(), 1.5e16, '1.5e16 Grains were not assigned to the first account')
     })
   })
 
