@@ -2,12 +2,12 @@ var utils = require('./utils.js')
 var EnigmaToken = artifacts.require('./EnigmaToken.sol')
 
 contract('EnigmaToken', (accounts) => {
-  it('should have the name Enigma Token', () => {
+  it('should have the name Enigma', () => {
     return EnigmaToken.deployed().then((instance) => {
       return instance.name.call()
     })
     .then((name) => {
-      assert.equal(name, 'Enigma Token', "Enigma Token wasn't the name")
+      assert.equal(name, 'Enigma', "Enigma wasn't the name")
     })
   })
 
