@@ -9,6 +9,8 @@
   },
   "scripts": {
     "compile": "./node_modules/.bin/truffle compile",
+    "flatten-install": "git clone git@github.com:oraclesorg/oracles-combine-solidity.git ./node_modules/oracles-combine-solidity; cd ./node_modules/oracles-combine-solidity/; npm install",
+    "flatten": "node ./node_modules/oracles-combine-solidity/index.js contracts/EnigmaToken.sol build/",
     "test": "./scripts/test.sh",
     "migrate": "./node_modules/.bin/truffle migrate",
     "shasum": "./scripts/shasum-openzeppelin.sh"
